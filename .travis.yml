@@ -5,6 +5,7 @@ script:
   - echo sdk.dir $ANDROID_HOME > local.properties
   - jdk_switcher use oraclejdk8
   - ./gradlew assemble
+  - echo "$TRAVIS_BUILD_DIR"
 android:
   components:
   - tools
