@@ -25,6 +25,7 @@ buildscript {
 }
 
 allprojects {
+    apply plugin: 'com.android.application'
     apply plugin: 'idea'
     ext.androidBuildVersionTools = "27.0.3"
     ext.isReleaseVersion = false
