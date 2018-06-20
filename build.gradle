@@ -29,10 +29,8 @@ allprojects {
     ext.androidBuildVersionTools = "27.0.3"
     ext.isReleaseVersion = false
 
-    android {
-        lintOptions {
-            textReport true
-        }
+    android.lintOptions {
+        textReport true
     }
 }
 
