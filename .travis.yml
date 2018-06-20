@@ -4,8 +4,9 @@ script:
   - export TERM=dumb
   - echo sdk.dir $ANDROID_HOME > local.properties
   - jdk_switcher use oraclejdk8
-  - ./gradlew assemble
-  - echo "$TRAVIS_BUILD_DIR"
+  - ./gradlew build
+  - echo '=== Lint results ==='
+  - if test -e "$TRAVIS_BUILD_DIR/build/outputs/lint-results.xml"; then cat "$TRAVIS_BUILD_DIR/build/outputs/lint-results.xml"; fi
 android:
   components:
   - tools
