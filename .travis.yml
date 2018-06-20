@@ -7,8 +7,8 @@ script:
   - ./gradlew build
   - echo '=== Lint results ==='
   - if test -e "$TRAVIS_BUILD_DIR/build/outputs/lint-results.xml"; then cat "$TRAVIS_BUILD_DIR/build/outputs/lint-results.xml"; fi
-  - ls "$TRAVIS_BUILD_DIR/build/outputs"
-  - cat "$TRAVIS_BUILD_DIR/build/outputs/lint-results.html"
+  - ls "$TRAVIS_BUILD_DIR/build"
+  - ls "$TRAVIS_BUILD_DIR"
 android:
   components:
   - tools
