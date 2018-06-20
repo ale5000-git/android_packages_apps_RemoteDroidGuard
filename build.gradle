@@ -42,3 +42,9 @@ subprojects {
         jcenter()
     }
 }
+
+android {
+    lintOptions {
+        textReport true
+    }
+}
