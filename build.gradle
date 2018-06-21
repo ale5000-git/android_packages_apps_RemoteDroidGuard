@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+ext {
+    androidBuildToolsVersion = '27.0.3'
+    androidCompileSdkVersion = 27
+    androidMinSdkVersion = 9
+    androidTargetSdkVersion = 27
+    languageLevel = JavaVersion.VERSION_1_7
+}
+
 buildscript {
     repositories {
         jcenter()
@@ -30,8 +38,22 @@ allprojects {
     ext.androidBuildVersionTools = "27.0.3"
     ext.isReleaseVersion = false
 
+    // Android build tools version
+    android.buildToolsVersion androidBuildToolsVersion
+    // Android compilation target
+    android.compileSdkVersion androidCompileSdkVersion
+
+    // Configure AndroidManifest.xml
+    android.defaultConfig {
+        //applicationId "com.root"
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        //versionCode 1
+        //versionName '1.0'
+    }
+
     android.lintOptions {
-        textReport true
+        textOutput 'stdout'
     }
 }
 
